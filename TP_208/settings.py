@@ -55,7 +55,7 @@ ROOT_URLCONF = 'TP_208.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'gestion_stock' / 'templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,3 +124,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ─── Configuration Email Gmail ────────────────────────────────────────────────
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+ # ← email qui reçoit les alertes
+EMAIL_HOST_USER = 'nitcheudeudjeu@gmail.com'       # ← ton vrai email Gmail
+EMAIL_HOST_PASSWORD = 'zmkm upgv fayc mmxc'  # ← le mot de passe de 16 caractères
+ALERTE_EMAIL_DESTINATAIRE = 'nitcheudeudjeu@gmail.com'  # ← qui reçoit les alertes

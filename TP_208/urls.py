@@ -18,4 +18,6 @@ urlpatterns = [
     path('utilisateurs/creer/', views.creer_utilisateur, name='creer_utilisateur'),
     path('utilisateurs/toggle/<int:pk>/', views.toggle_utilisateur, name='toggle_utilisateur'),
     path('utilisateurs/supprimer/<int:pk>/', views.supprimer_utilisateur, name='supprimer_utilisateur'),
+    path('export/excel/', views.export_excel, name='export_excel'),
+    path('export/pdf/', views.export_pdf, name='export_pdf'),
 ]
