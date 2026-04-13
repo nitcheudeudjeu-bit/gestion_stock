@@ -1,0 +1,7 @@
+django>=4.2
+psycopg[binary]
+gunicorn
+openpyxl
+reportlab
+whitenoise
+dj-database-url
