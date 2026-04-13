@@ -5,9 +5,9 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TP_208.settings')
 
 application = get_wsgi_application()
 
-# Migrations APRES le chargement de l'app
 try:
     from django.core.management import call_command
+    call_command('collectstatic', '--no-input')
     call_command('migrate', '--no-input')
     from django.contrib.auth import get_user_model
     User = get_user_model()
