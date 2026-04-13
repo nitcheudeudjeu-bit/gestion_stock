@@ -93,3 +93,8 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ALERTE_EMAIL_DESTINATAIRE = os.environ.get('ALERTE_EMAIL_DESTINATAIRE', EMAIL_HOST_USER)
+# ─── CSRF pour Railway ────────────────────────────────────────────────────────
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.railway.app',
+    'https://*.up.railway.app',
+]
